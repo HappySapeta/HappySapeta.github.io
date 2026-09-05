@@ -57,3 +57,47 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
     });
 }
+
+const projectPanel = document.querySelector("[data-project-panel]");
+const projectPanelOverlay = document.querySelector("[data-project-panel-overlay]");
+const projectPanelClose = document.querySelector("[data-project-panel-close]");
+const projectTitle = document.querySelector("[data-project-title]");
+const projectContent = document.querySelector("[data-project-content]");
+const projectLink = document.querySelector("[data-project-link]");
+const projectAnchors = document.querySelectorAll("[data-project]");
+
+const projects = new Map([
+    ["exoborne", {
+        title: "Exoborne by Sharkmob",
+        description: "Worked on gameplay features and UI.",
+        link: "https://www.exoborne.com/en/"
+    }],
+]);
+
+function openProjectPanel(name) {
+    projectTitle.textContent = projects.get(name).title;
+    projectContent.innerHTML = projects.get(name).description;
+    projectLink.href = projects.get(name).link;
+    projectPanel.classList.add("active");
+    projectPanelOverlay.classList.add("active");
+}
+
+function closeProjectPanel() {
+    projectPanel.classList.remove("active");
+    projectPanelOverlay.classList.remove("active");
+}
+
+projectAnchors.forEach((projectAnchor) => {
+    projectAnchor.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const projectName = projectAnchor.dataset.project;
+
+        if(projects.has(projectName)){
+            openProjectPanel(projectName);
+        }
+    });
+});
+
+projectPanelClose.addEventListener("click", closeProjectPanel);
+projectPanelOverlay.addEventListener("click", closeProjectPanel);
