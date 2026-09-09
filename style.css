@@ -2015,6 +2015,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   transition: var(--transition-1);
 }
 
+.project-panel-link[hidden] { display: none; }
+
 .project-panel-link:hover,
 .project-panel-link:focus-visible {
   background: var(--vegas-gold);
@@ -2251,25 +2253,102 @@ article {
   text-transform: uppercase;
 }
 
-.professional-projects {
+.project-collection {
+  margin-bottom: 32px;
   padding: 1px;
   background: linear-gradient(145deg, rgba(255, 219, 112, 0.18), rgba(255, 255, 255, 0.04));
   border-radius: 21px;
 }
 
+.project-collection-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px 12px;
+  background: var(--panel-glass-strong);
+  border-radius: 20px 20px 0 0;
+}
+
+.project-collection-header .form-title { margin-bottom: 0; }
+
 .project-list {
+  display: flex;
+  grid-template-columns: none;
   gap: 22px;
   margin: 0;
-  padding: 9px;
+  padding: 9px 9px 16px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+  scrollbar-color: var(--orange-yellow-crayola) rgba(255, 255, 255, 0.06);
+  scrollbar-width: thin;
   background: var(--panel-glass-strong);
-  border-radius: 20px;
+  border-radius: 0 0 20px 20px;
+  cursor: grab;
+}
+
+.project-list .project-item > a { cursor: grab; }
+
+.project-list.is-dragging,
+.project-list.is-dragging .project-item > a {
+  cursor: grabbing;
+}
+
+.project-list.is-dragging {
+  user-select: none;
+}
+
+.project-list.is-dragging img {
+  pointer-events: none;
+}
+
+.project-list::-webkit-scrollbar { height: 7px; }
+
+.project-list::-webkit-scrollbar-track {
+  margin-inline: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+}
+
+.project-list::-webkit-scrollbar-thumb {
+  background: var(--orange-yellow-crayola);
+  border-radius: 999px;
+}
+
+.project-collection .project-item {
+  display: block;
+  flex: 0 0 320px;
+  width: 320px;
+  max-width: 82vw;
+  scroll-snap-align: start;
+}
+
+.project-collection .project-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.project-list-message {
+  display: grid;
+  flex: 1 0 100%;
+  min-height: 150px;
+  place-items: center;
+  padding: 24px;
+  color: var(--light-gray-70);
+  font-size: 0.95rem;
+  text-align: center;
+  border: 1px dashed var(--glass-border);
+  border-radius: 16px;
 }
 
 .project-img {
   isolation: isolate;
   margin-bottom: 0;
   border: 1px solid var(--glass-border);
-  border-radius: 16px;
+  border-radius: 0;
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
 }
 
@@ -2292,14 +2371,6 @@ article {
   flex-direction: column;
   gap: 3px;
   padding: 20px;
-}
-
-.project-card-studio {
-  color: var(--orange-yellow-crayola);
-  font-size: 0.75rem;
-  font-weight: var(--fw-500);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .project-card-title {
@@ -2403,6 +2474,7 @@ article {
   .contact-form { padding: 20px; }
 
   .project-card-caption { padding: 16px; }
+
 }
 
 @media (min-width: 1250px) {
