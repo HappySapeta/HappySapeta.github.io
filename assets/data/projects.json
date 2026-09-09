@@ -2,44 +2,66 @@
   {
     "id": "exoborne",
     "category": "professional",
-    "title": "EXOBORNE",
-    "studios": ["Sharkmob"],
+    "title": "Exoborne",
+    "studios": ["Sharkmob", "Sumo Video Games"],
     "role": "Performance Analysis",
     "techStack": ["Unreal Engine 5", "C++", "Blueprints", "Unreal Insights"],
     "url": "https://www.exoborne.com/en/",
     "cover": "./assets/images/exoborne.jpg",
-    "coverAlt": "Exoborne key art"
+    "coverAlt": "Exoborne cover art"
   },
   {
     "id": "fallguys",
     "category": "professional",
-    "title": "FALLGUYS",
-    "studios": ["Mediatonic"],
+    "title": "Fall Guys",
+    "studios": ["Mediatonic", "Sumo Video Games"],
     "role": "Gameplay features, bug-fixing and UI optimisation.",
     "techStack": ["Unity", "C#"],
     "url": "https://www.fallguys.com/",
     "cover": "./assets/images/fallguys.jpg",
-    "coverAlt": "FallGuys key art"
+    "coverAlt": "FallGuys cover art"
   },
   {
     "id": "DeathSprint 66",
     "category": "professional",
-    "title": "DEATHSPRINT66",
-    "studios": ["Sumo Newcastle"],
+    "title": "DeathSprint 66",
+    "studios": ["Sumo Newcastle", "Sumo Video Games"],
     "role": "Developed frontend and in-game UI.",
     "techStack": ["Unreal Engine 5", "C++", "UMG", "CommonUI", "Enhanced Input"],
     "url": "https://deathsprint66.com/",
     "cover": "./assets/images/deathsprint66.jpg",
-    "coverAlt": "DeathSprint66 key art"
+    "coverAlt": "DeathSprint66 cover art"
   },
   {
     "id": "unannounced",
     "category": "professional",
-    "title": "Unannounced title",
+    "title": "Unannounced Title",
     "studios": ["Sumo Video Games"],
     "role": "Developed gameplay features, networked systems and crowd simulation.",
     "techStack": ["Unreal Engine 5", "C++", "Unreal Replication Framework", "Unreal Insights", "UMG", "Raylib"],
     "cover": "./assets/images/unannounced_title.png",
-    "coverAlt": "Unannounced title key art"
+    "coverAlt": "Placeholder"
+  },
+  {
+    "id": "badass",
+    "category": "professional",
+    "title": "BADA Space Station",
+    "studios": ["TeraHard Studios"],
+    "role": "Developed gameplay features. Fixing bugs, some in networked systems. Performance Optimisation.",
+    "techStack": ["Unity", "C#"],
+    "url": "https://www.terahard.org/Press/sheet.php?p=BADA_Space_Station",
+    "cover": "./assets/images/badass.png",
+    "coverAlt": "Badass Cover Art"
+  },
+  {
+    "id": "dubai",
+    "category": "professional",
+    "title": "Dubai Expo 2020 (AR/VR)",
+    "studios": ["TeraHard Studios", "Rewind (Now Magnopus)"],
+    "role": "Developed gameplay features. Bug fixing.",
+    "techStack": ["Unity", "C#"],
+    "url": "https://expocitydubai.com/en/expo-2020/",
+    "cover": "./assets/images/dubaiexpo.webp",
+    "coverAlt": "Dubai-Expo Cover Art"
   }
 ]
