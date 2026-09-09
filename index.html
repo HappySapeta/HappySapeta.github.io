@@ -167,22 +167,31 @@
         </article>
     </div>
     
-    <div class="project-panel" data-project-panel>
-        <button class="project-panel-close" data-project-panel-close>
+    <div class="project-panel" role="dialog" aria-modal="true" aria-labelledby="project-panel-title" data-project-panel>
+        <img class="project-panel-cover" src="./assets/images/exoborne.jpg" alt="" data-project-image>
+
+        <h2 class="project-panel-title" id="project-panel-title" data-project-title>Project title</h2>
+
+        <button class="project-panel-close" type="button" aria-label="Close project details" data-project-panel-close>
             <ion-icon name="close-outline"></ion-icon>
         </button>
-        
-        <h2 data-project-title>Project title</h2>
-        
-        <div class="project-description" data-project-content>
-            Project information.
+
+        <div class="project-panel-details">
+            <div class="project-panel-field">
+                <h3>Studios</h3>
+                <p data-project-studios>Studio information.</p>
+            </div>
+
+            <div class="project-panel-field">
+                <h3>My role</h3>
+                <p data-project-content>Project information.</p>
+            </div>
+
+            <a href="#" class="project-panel-link" target="_blank" rel="noopener noreferrer" data-project-link>
+                <span>Visit project</span>
+                <ion-icon name="open-outline"></ion-icon>
+            </a>
         </div>
-
-        <figure class="project-img">
-            <img src="./assets/images/exoborne.jpg" loading="lazy" alt="Exoborne-cover">
-        </figure>
-
-        <a href="#" class="social-link" target="_blank" data-project-link><ion-icon name="open-outline"></ion-icon></a>
     </div>
     
     <div class="project-panel-overlay" data-project-panel-overlay></div>

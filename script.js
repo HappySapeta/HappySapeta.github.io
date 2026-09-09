@@ -63,28 +63,41 @@ const projectPanelOverlay = document.querySelector("[data-project-panel-overlay]
 const projectPanelClose = document.querySelector("[data-project-panel-close]");
 const projectTitle = document.querySelector("[data-project-title]");
 const projectContent = document.querySelector("[data-project-content]");
+const projectStudios = document.querySelector("[data-project-studios]");
+const projectImage = document.querySelector("[data-project-image]");
 const projectLink = document.querySelector("[data-project-link]");
 const projectAnchors = document.querySelectorAll("[data-project]");
 
 const projects = new Map([
     ["exoborne", {
-        title: "Exoborne by Sharkmob",
+        title: "Exoborne",
+        studios: "Sharkmob",
         description: "Worked on gameplay features and UI.",
-        link: "https://www.exoborne.com/en/"
+        link: "https://www.exoborne.com/en/",
+        image: "./assets/images/exoborne.jpg",
+        imageAlt: "Exoborne key art"
     }],
 ]);
 
 function openProjectPanel(name) {
-    projectTitle.textContent = projects.get(name).title;
-    projectContent.innerHTML = projects.get(name).description;
-    projectLink.href = projects.get(name).link;
+    const project = projects.get(name);
+
+    projectTitle.textContent = project.title;
+    projectStudios.textContent = project.studios;
+    projectContent.textContent = project.description;
+    projectLink.href = project.link;
+    projectImage.src = project.image;
+    projectImage.alt = project.imageAlt;
     projectPanel.classList.add("active");
     projectPanelOverlay.classList.add("active");
+    document.body.classList.add("project-panel-open");
+    projectPanelClose.focus();
 }
 
 function closeProjectPanel() {
     projectPanel.classList.remove("active");
     projectPanelOverlay.classList.remove("active");
+    document.body.classList.remove("project-panel-open");
 }
 
 projectAnchors.forEach((projectAnchor) => {
@@ -101,3 +114,9 @@ projectAnchors.forEach((projectAnchor) => {
 
 projectPanelClose.addEventListener("click", closeProjectPanel);
 projectPanelOverlay.addEventListener("click", closeProjectPanel);
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && projectPanel.classList.contains("active")) {
+        closeProjectPanel();
+    }
+});
