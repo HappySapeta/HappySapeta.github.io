@@ -11,6 +11,7 @@ Project content lives in `assets/data/projects.json`. Add a project by duplicati
 - `title`: project name
 - `studios`: a list of studios or collaborators
 - `role`: a short description of your contribution
+- `techStack`: a list of technologies used, such as `["Unreal Engine", "C++"]`; an empty or omitted list displays "To be added."
 - `url`: optional public project URL; omit it or leave it empty to hide the link
 - `cover`: path to the cover image
 - `coverAlt`: short accessible description of the cover
