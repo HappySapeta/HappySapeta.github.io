@@ -72,6 +72,7 @@ const projectPanelClose = document.querySelector("[data-project-panel-close]");
 const projectTitle = document.querySelector("[data-project-title]");
 const projectContent = document.querySelector("[data-project-content]");
 const projectStudios = document.querySelector("[data-project-studios]");
+const projectTechStack = document.querySelector("[data-project-tech-stack]");
 const projectImage = document.querySelector("[data-project-image]");
 const projectLink = document.querySelector("[data-project-link]");
 const projectLists = document.querySelectorAll("[data-project-list]");
@@ -220,6 +221,7 @@ function openProjectPanel(name) {
     projectTitle.textContent = project.title;
     projectStudios.textContent = project.studios.join(", ");
     projectContent.textContent = project.role;
+    projectTechStack.textContent = project.techStack?.length ? project.techStack.join(", ") : "To be added.";
     projectImage.src = project.cover;
     projectImage.alt = project.coverAlt;
 
