@@ -1,28 +1,12 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-
 /**
  * copyright 2022 @codewithsadee
  */
 
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
+/**
+  * Some parts of this style-sheet have been created by ChatGPT. 
+  */
 
 :root {
-
-  /**
-   * colors
-   */
-
-  /* gradient */
-
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
     hsl(240, 1%, 25%) 3%, 
@@ -54,8 +38,6 @@
     hsl(35, 100%, 68%)
   );
 
-  /* solid */
-
   --jet: hsl(0, 0%, 22%);
   --onyx: hsl(240, 1%, 17%);
   --eerie-black-1: hsl(240, 2%, 13%);
@@ -68,10 +50,6 @@
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
-
-  /**
-   * typography
-   */
 
   /* font-family */
   --ff-poppins: 'Poppins', sans-serif;

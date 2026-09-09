@@ -1,3 +1,11 @@
+/**
+ * copyright 2022 @codewithsadee
+ */
+
+/**
+ * Some parts of this style-sheet have been created by ChatGPT.
+ */
+
 'use strict';
 
 // element toggle function
