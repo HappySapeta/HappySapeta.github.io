@@ -1,0 +1,41 @@
+[
+  {
+    "id": "exoborne",
+    "category": "professional",
+    "title": "EXOBORNE",
+    "studios": ["Sharkmob"],
+    "role": "Performance Analysis",
+    "url": "https://www.exoborne.com/en/",
+    "cover": "./assets/images/exoborne.jpg",
+    "coverAlt": "Exoborne key art"
+  },
+  {
+    "id": "fallguys",
+    "category": "professional",
+    "title": "FALLGUYS",
+    "studios": ["Mediatonic"],
+    "role": "Gameplay features, bug-fixing and UI optimisation.",
+    "url": "https://www.fallguys.com/",
+    "cover": "./assets/images/fallguys.jpg",
+    "coverAlt": "FallGuys key art"
+  },
+  {
+    "id": "DeathSprint 66",
+    "category": "professional",
+    "title": "DEATHSPRINT66",
+    "studios": ["Sumo Newcastle"],
+    "role": "Developed frontend and in-game UI.",
+    "url": "https://deathsprint66.com/",
+    "cover": "./assets/images/deathsprint66.jpg",
+    "coverAlt": "DeathSprint66 key art"
+  },
+  {
+    "id": "unannounced",
+    "category": "professional",
+    "title": "Unannounced title",
+    "studios": ["Sumo Video Games"],
+    "role": "Developed gameplay features, networked systems and crowd simulation.",
+    "cover": "./assets/images/unannounced_title.png",
+    "coverAlt": "Unannounced title key art"
+  }
+]
