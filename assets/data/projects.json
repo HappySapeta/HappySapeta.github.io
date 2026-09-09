@@ -5,6 +5,7 @@
     "title": "EXOBORNE",
     "studios": ["Sharkmob"],
     "role": "Performance Analysis",
+    "techStack": ["Unreal Engine 5", "C++", "Blueprints", "Unreal Insights"],
     "url": "https://www.exoborne.com/en/",
     "cover": "./assets/images/exoborne.jpg",
     "coverAlt": "Exoborne key art"
@@ -15,6 +16,7 @@
     "title": "FALLGUYS",
     "studios": ["Mediatonic"],
     "role": "Gameplay features, bug-fixing and UI optimisation.",
+    "techStack": ["Unity", "C#"],
     "url": "https://www.fallguys.com/",
     "cover": "./assets/images/fallguys.jpg",
     "coverAlt": "FallGuys key art"
@@ -25,6 +27,7 @@
     "title": "DEATHSPRINT66",
     "studios": ["Sumo Newcastle"],
     "role": "Developed frontend and in-game UI.",
+    "techStack": ["Unreal Engine 5", "C++", "UMG", "CommonUI", "Enhanced Input"],
     "url": "https://deathsprint66.com/",
     "cover": "./assets/images/deathsprint66.jpg",
     "coverAlt": "DeathSprint66 key art"
@@ -35,6 +38,7 @@
     "title": "Unannounced title",
     "studios": ["Sumo Video Games"],
     "role": "Developed gameplay features, networked systems and crowd simulation.",
+    "techStack": ["Unreal Engine 5", "C++", "Unreal Replication Framework", "Unreal Insights", "UMG", "Raylib"],
     "cover": "./assets/images/unannounced_title.png",
     "coverAlt": "Unannounced title key art"
   }
