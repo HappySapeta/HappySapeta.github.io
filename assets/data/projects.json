@@ -65,7 +65,17 @@
     "studios": ["TeraHard Studios", "Rewind (Now Magnopus)"],
     "role": "Developed gameplay features. Bug fixing.",
     "techStack": ["Unity", "C#"],
-    "url": "https://expocitydubai.com/en/expo-2020/",
+    "url": "https://www.magnopus.com/projects/dubai-expo-2020",
+    "cover": "./assets/images/dubaiexpo-thumb.webp",
+    "coverAlt": "Dubai-Expo Cover Art"
+  },
+  {
+    "id": "crowd",
+    "category": "personal",
+    "title": "Crowd Simulation Masters Project",
+    "summary": "Developed gameplay features. Bug fixing.",
+    "techStack": ["Unity", "C#"],
+    "url": "https://www.magnopus.com/projects/dubai-expo-2020",
     "cover": "./assets/images/dubaiexpo.webp",
     "thumbnail": "./assets/images/dubaiexpo-thumb.webp",
     "coverAlt": "Dubai-Expo Cover Art"
