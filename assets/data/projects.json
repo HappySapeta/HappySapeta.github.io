@@ -7,8 +7,8 @@
     "role": "Performance Analysis. Blueprint Nativization.",
     "techStack": ["Unreal Engine 5", "C++", "Blueprints", "Unreal Insights"],
     "url": "https://www.exoborne.com/en/",
-    "cover": "./assets/images/exoborne-thumb.webp",
-    "thumbnail": "./assets/images/exoborne-thumb.webp",
+    "cover": "./assets/images/exoborne.webp",
+    "thumbnail": "./assets/images/exoborne.webp",
     "coverAlt": "Exoborne cover art"
   },
   {
@@ -19,8 +19,8 @@
     "role": "Devloping Gameplay Features. Bug-Fixing. UI optimisation.",
     "techStack": ["Unity", "C#"],
     "url": "https://www.fallguys.com/",
-    "cover": "./assets/images/fallguys-thumb.webp",
-    "thumbnail": "./assets/images/fallguys-thumb.webp",
+    "cover": "./assets/images/fallguys.webp",
+    "thumbnail": "./assets/images/fallguys.webp",
     "coverAlt": "FallGuys cover art"
   },
   {
@@ -31,8 +31,8 @@
     "role": "Developing UI. Bug-Fixing",
     "techStack": ["Unreal Engine 5", "C++", "UMG", "CommonUI", "Enhanced Input"],
     "url": "https://deathsprint66.com/",
-    "cover": "./assets/images/deathsprint66-thumb.webp",
-    "thumbnail": "./assets/images/deathsprint66-thumb.webp",
+    "cover": "./assets/images/deathsprint66.webp",
+    "thumbnail": "./assets/images/deathsprint66.webp",
     "coverAlt": "DeathSprint66 cover art"
   },
   {
@@ -42,8 +42,8 @@
     "studios": ["Sumo Video Games"],
     "role": "Developing Gameplay features. Network Programming. Crowd simulation. Bug-Fixing.",
     "techStack": ["Unreal Engine 5", "C++", "Unreal Replication Framework", "Unreal Insights", "UMG", "Raylib"],
-    "cover": "./assets/images/unannounced_title-thumb.webp",
-    "thumbnail": "./assets/images/unannounced_title-thumb.webp",
+    "cover": "./assets/images/unannounced.webp",
+    "thumbnail": "./assets/images/unannounced.webp",
     "coverAlt": "Placeholder"
   },
   {
@@ -54,8 +54,8 @@
     "role": "Developing Gameplay Features. Bug-Fixing. Optimisating Performance.",
     "techStack": ["Unity", "C#"],
     "url": "https://www.terahard.org/Press/sheet.php?p=BADA_Space_Station",
-    "cover": "./assets/images/badass-thumb.webp",
-    "thumbnail": "./assets/images/badass-thumb.webp",
+    "cover": "./assets/images/badass.webp",
+    "thumbnail": "./assets/images/badass.webp",
     "coverAlt": "Badass Cover Art"
   },
   {
@@ -66,18 +66,40 @@
     "role": "Developing Gameplay Features. Bug-Fixing.",
     "techStack": ["Unity", "C#"],
     "url": "https://www.magnopus.com/projects/dubai-expo-2020",
-    "cover": "./assets/images/dubaiexpo-thumb.webp",
+    "cover": "./assets/images/dubaiexpo.webp",
     "coverAlt": "Dubai-Expo Cover Art"
   },
   {
     "id": "crowd",
     "category": "personal",
     "title": "Crowd Simulation Masters Project",
-    "summary": "Developed gameplay features. Bug fixing.",
-    "techStack": ["Unity", "C#"],
-    "url": "https://www.magnopus.com/projects/dubai-expo-2020",
-    "cover": "./assets/images/dubaiexpo-thumb.webp",
-    "thumbnail": "./assets/images/dubaiexpo-thumb.webp",
-    "coverAlt": "Dubai-Expo Cover Art"
+    "summary": "A faster approach to Continuum Crowds simulation developed by optmising data fields, using a faster solver, that also integrates the Social Force Model.",
+    "techStack": ["Unreal Engine 5", "C++"],
+    "url": "https://github.com/HappySapeta/TrafficChaos",
+    "cover": "./assets/images/crowdsim.webp",
+    "thumbnail": "./assets/images/crowdsim.webp",
+    "coverAlt": "Crowd Simulation"
+  },
+  {
+    "id": "traffic",
+    "category": "personal",
+    "title": "Mass Traffic Simulation",
+    "summary": "A traffic simulation model capable of driving a large number of vehicles efficently using data-oriented-design and LODing.",
+    "techStack": ["Unreal Engine 5", "C++"],
+    "url": "https://github.com/HappySapeta/TrafficAI",
+    "cover": "./assets/images/traffic.webp",
+    "thumbnail": "./assets/images/traffic.webp",
+    "coverAlt": "Traffic Simulation"
+  },
+  {
+    "id": "netstrike",
+    "category": "personal",
+    "title": "Network Programming Project",
+    "summary": "A multiplayer game featuring a custom server–client networking architecture inspired by Unreal Engine.",
+    "techStack": ["SFML", "C++"],
+    "url": "https://github.com/HappySapeta/Netstrike",
+    "cover": "./assets/images/netstrike.webp",
+    "thumbnail": "./assets/images/netstrike.webp",
+    "coverAlt": "NetStrike"
   }
 ]
