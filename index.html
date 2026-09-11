@@ -26,69 +26,111 @@
 
 <body>
 <main>
-    <aside class="sidebar" data-sidebar>
-        <div class="sidebar-info">
-            <figure class="avatar-box">
-                <img src="./assets/images/avatar.png" alt="Anupam Sahu">
-            </figure>
-            
-            <div class="info-content">
-                <h1 class="name" title="Anupam Sahu">Anupam Sahu</h1>
-                <p class="title">C++ Games Programmer</p>
+    <div class="sidebar-column">
+        <aside class="sidebar" data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="./assets/images/avatar.png" alt="Anupam Sahu">
+                </figure>
+
+                <div class="info-content">
+                    <h1 class="name" title="Anupam Sahu">Anupam Sahu</h1>
+                    <p class="title">C++ Games Programmer</p>
+                </div>
+
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
             </div>
-            
-            <button class="info_more-btn" data-sidebar-btn>
-                <span>Show Contacts</span>
-                <ion-icon name="chevron-down"></ion-icon>
-            </button>
-        </div>
 
-        <div class="sidebar-info_more">
+            <div class="sidebar-info_more">
 
-            <div class="separator"></div>
-            <ul class="contacts-list">
-                <li class="contact-item">
-                    <div class="icon-box">
-                        <ion-icon name="mail-outline"></ion-icon>
-                    </div>
+                <div class="separator"></div>
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
 
-                    <div class="contact-info">
-                        <p class="contact-title">Email</p>
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
 
-                        <a href="mailto:sahuanupam7@gmail.com" class="contact-link">sahuanupam7@gmail.com</a>
-                    </div>
-                </li>
+                            <a href="mailto:sahuanupam7@gmail.com" class="contact-link">sahuanupam7@gmail.com</a>
+                        </div>
+                    </li>
 
-                <li class="contact-item">
-                    <div class="icon-box">
-                        <ion-icon name="location-outline"></ion-icon>
-                    </div>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
 
-                    <div class="contact-info">
-                        <p class="contact-title">Location</p>
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
 
-                        <address>Dundee, UK</address>
-                    </div>
-                </li>
-            </ul>
+                            <address>Dundee, UK</address>
+                        </div>
+                    </li>
+                </ul>
 
-            <div class="separator"></div>
+                <div class="separator"></div>
 
-            <ul class="social-list">
-                <li class="social-item">
-                    <a href="https://www.linkedin.com/in/anupamsahu/" class="social-link" target="_blank">
-                        <ion-icon name="logo-linkedin"></ion-icon>
-                    </a>
-                </li>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/anupamsahu/" class="social-link" target="_blank">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
 
-                <li class="social-item">
-                    <a href="https://github.com/HappySapeta/" class="social-link" target="_blank">
-                        <ion-icon name="logo-github"></ion-icon>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </aside>
+                    <li class="social-item">
+                        <a href="https://github.com/HappySapeta/" class="social-link" target="_blank">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="sidebar-skills" aria-labelledby="skills-title">
+            <h2 class="h2 article-title" id="skills-title">Skills</h2>
+            <div class="skill-groups">
+                <div class="portfolio-info-card">
+                    <h3>Languages &amp; engines</h3>
+                    <ul class="skill-tags">
+                        <li>C++</li>
+                        <li>C#</li>
+                        <li>Unreal Engine 5</li>
+                        <li>Unity</li>
+                    </ul>
+                </div>
+                <div class="portfolio-info-card">
+                    <h3>Game development</h3>
+                    <ul class="skill-tags">
+                        <li>Gameplay Programming</li>
+                        <li>Game AI Techniques</li>
+                        <li>Network Programming</li>
+                        <li>Simulation</li>
+                        <li>UI</li>
+                        <li>Direct X</li>
+                        <li>OpenGL</li>
+                    </ul>
+                </div>
+                <div class="portfolio-info-card">
+                    <h3>Tools &amp; frameworks</h3>
+                    <ul class="skill-tags">
+                        <li>Unreal Insights</li>
+                        <li>UMG</li>
+                        <li>CommonUI</li>
+                        <li>Enhanced Input</li>
+                        <li>Raylib</li>
+                        <li>SFML</li>
+                        <li>CMake</li>
+                        <li>Build Automation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <div class="main-content">
         <nav class="navbar">
@@ -134,6 +176,23 @@
                     <h3 class="h3 form-title" id="personal-projects-title">Personal Projects</h3>
                 </div>
                 <ul class="project-list" aria-live="polite" data-project-list="personal"></ul>
+            </section>
+
+
+            <section class="portfolio-section" aria-labelledby="education-title">
+                <h2 class="h2 article-title" id="education-title">Education</h2>
+                <ul class="education-list">
+                    <li class="portfolio-info-card">
+                        <p class="education-level">Master’s degree</p>
+                        <h3>Computer Games Technology</h3>
+                        <p class="education-institution">Abertay University, UK</p>
+                    </li>
+                    <li class="portfolio-info-card">
+                        <p class="education-level">Bachelor’s degree</p>
+                        <h3>Computer Science & Engineering</h3>
+                        <p class="education-institution">KIIT University, India</p>
+                    </li>
+                </ul>
             </section>
         </article>
         <article class="contact" data-page="contact">
