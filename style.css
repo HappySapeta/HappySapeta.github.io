@@ -2240,6 +2240,119 @@ article {
   text-transform: uppercase;
 }
 
+.portfolio-section { margin-top: 36px; }
+
+.sidebar-column {
+  min-width: 0;
+  margin-inline: auto;
+  margin-bottom: 24px;
+}
+
+.sidebar-skills {
+  padding: 20px;
+  background: var(--panel-glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-1);
+}
+
+.sidebar-skills .article-title { font-size: 1.5rem; }
+
+.sidebar-skills .portfolio-info-card {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.sidebar-skills .skill-groups { gap: 24px; }
+
+.sidebar-skills .skill-tags { margin-top: 12px; }
+
+@media (min-width: 580px) {
+  .sidebar-column { width: 520px; }
+}
+
+@media (min-width: 768px) {
+  .sidebar-column { width: 700px; }
+}
+
+@media (min-width: 1024px) {
+  .sidebar-column { width: 950px; }
+}
+
+@media (min-width: 1250px) {
+  .sidebar-column {
+    flex: 0 0 270px;
+    width: 270px;
+    margin: 0;
+  }
+
+  .sidebar-column .sidebar {
+    position: static;
+    height: auto;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-skills .skill-groups { grid-template-columns: minmax(0, 1fr); }
+}
+
+.skill-groups,
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 16px;
+}
+
+.portfolio-info-card {
+  min-width: 0;
+  padding: 20px;
+  background: var(--panel-glass-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+}
+
+.portfolio-info-card h3 {
+  color: var(--white-2);
+  font-size: 1rem;
+  font-weight: var(--fw-500);
+  line-height: 1.5;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.skill-tags li {
+  max-width: 100%;
+  padding: 6px 10px;
+  color: var(--light-gray);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  background: rgba(255, 219, 112, 0.06);
+  border: 1px solid rgba(255, 219, 112, 0.14);
+  border-radius: 10px;
+}
+
+.education-level {
+  margin-bottom: 10px;
+  color: var(--orange-yellow-crayola);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.education-institution {
+  margin-top: 8px;
+  color: var(--light-gray);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 .project-collection {
   margin-bottom: 32px;
   padding: 1px;
