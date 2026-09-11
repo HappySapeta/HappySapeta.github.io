@@ -100,10 +100,9 @@ projectLists.forEach((list) => {
         if (event.deltaMode === WheelEvent.DOM_DELTA_LINE) wheelDistance *= 16;
         if (event.deltaMode === WheelEvent.DOM_DELTA_PAGE) wheelDistance *= list.clientWidth;
 
-        const nextPosition = Math.min(maximumScroll, Math.max(0, list.scrollLeft + wheelDistance));
-        // Let the page scroll when the carousel cannot move any farther.
-        if (Math.abs(nextPosition - list.scrollLeft) < 1) return;
-
+        const currentPosition = Math.min(maximumScroll, Math.max(0, list.scrollLeft));
+        const nextPosition = Math.min(maximumScroll, Math.max(0, currentPosition + wheelDistance));
+        // Keep the wheel gesture inside the list, even at either end.
         event.preventDefault();
         list.scrollLeft = nextPosition;
     }, { passive: false });

@@ -2379,7 +2379,7 @@ article {
   margin: 0;
   padding: 9px 9px 16px;
   overflow-x: auto;
-  overscroll-behavior-inline: contain;
+  overscroll-behavior: contain;
   scroll-behavior: auto;
   scroll-snap-type: none;
   scrollbar-color: var(--orange-yellow-crayola) rgba(255, 255, 255, 0.06);
