@@ -2269,6 +2269,47 @@ article {
 
 .sidebar-skills .skill-tags { margin-top: 12px; }
 
+.sidebar-skills.is-collapsed .portfolio-info-card:not(:first-child) { display: none; }
+
+.skills-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 20px;
+  padding: 10px 12px;
+  color: var(--orange-yellow-crayola);
+  font: inherit;
+  font-size: 0.85rem;
+  text-align: left;
+  background: rgba(255, 219, 112, 0.06);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+}
+
+.skills-toggle[hidden] { display: none; }
+
+.skills-toggle::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.skills-toggle[aria-expanded="true"]::after { transform: rotate(225deg); }
+
+.skills-toggle:hover { background: rgba(255, 219, 112, 0.12); }
+
+.skills-toggle:focus-visible {
+  outline: 2px solid var(--orange-yellow-crayola);
+  outline-offset: 3px;
+}
+
 @media (min-width: 580px) {
   .sidebar-column { width: 520px; }
 }

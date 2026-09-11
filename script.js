@@ -24,6 +24,30 @@ sidebarBtn.addEventListener("click", function ()
     elementToggleFunc(sidebar);
 });
 
+// Keep the first skill group visible as a preview when collapsed.
+const skillsBox = document.querySelector(".sidebar-skills");
+const skillsToggle = document.querySelector("[data-skills-toggle]");
+const compactSkillsLayout = window.matchMedia("(max-width: 1249px)");
+let compactSkillsExpanded = false;
+
+function setSkillsExpanded(expanded) {
+    skillsBox.classList.toggle("is-collapsed", !expanded);
+    skillsToggle.setAttribute("aria-expanded", String(expanded));
+    skillsToggle.textContent = expanded ? "Show fewer skills" : "Show all skills";
+}
+
+function updateSkillsLayout() {
+    setSkillsExpanded(!compactSkillsLayout.matches || compactSkillsExpanded);
+    skillsToggle.hidden = !compactSkillsLayout.matches;
+}
+
+updateSkillsLayout();
+compactSkillsLayout.addEventListener("change", updateSkillsLayout);
+skillsToggle.addEventListener("click", () => {
+    compactSkillsExpanded = !compactSkillsExpanded;
+    updateSkillsLayout();
+});
+
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
