@@ -91,14 +91,17 @@ projectLists.forEach((list) => {
         const hasHorizontalOverflow = maximumScroll > 1;
         const isVerticalWheelMovement = Math.abs(event.deltaY) > Math.abs(event.deltaX);
 
-        if (!hasHorizontalOverflow || !isVerticalWheelMovement) return;
+        if (!hasHorizontalOverflow || !isVerticalWheelMovement || event.ctrlKey) return;
 
         let wheelDistance = event.deltaY;
         if (event.deltaMode === WheelEvent.DOM_DELTA_LINE) wheelDistance *= 16;
         if (event.deltaMode === WheelEvent.DOM_DELTA_PAGE) wheelDistance *= list.clientWidth;
 
-        event.preventDefault();
         const nextPosition = Math.min(maximumScroll, Math.max(0, list.scrollLeft + wheelDistance));
+        // Let the page scroll when the carousel cannot move any farther.
+        if (Math.abs(nextPosition - list.scrollLeft) < 1) return;
+
+        event.preventDefault();
         list.scrollLeft = nextPosition;
     }, { passive: false });
 
@@ -175,7 +178,7 @@ function createProjectCard(project) {
                 <div class="project-item-icon-box" aria-hidden="true">
                     <ion-icon name="eye-outline"></ion-icon>
                 </div>
-                <img src="${project.cover}" loading="lazy" alt="${project.coverAlt}" draggable="false">
+                <img src="${project.thumbnail || project.cover}" loading="lazy" decoding="async" alt="${project.coverAlt}" draggable="false">
                 <figcaption class="project-card-caption">
                     <span class="project-card-title">${project.title}</span>
                 </figcaption>
