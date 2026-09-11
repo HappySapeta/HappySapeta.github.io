@@ -72,6 +72,9 @@ const projectPanelClose = document.querySelector("[data-project-panel-close]");
 const projectTitle = document.querySelector("[data-project-title]");
 const projectContent = document.querySelector("[data-project-content]");
 const projectStudios = document.querySelector("[data-project-studios]");
+const projectStudiosField = document.querySelector("[data-project-studios-field]");
+const projectContentLabel = document.querySelector("[data-project-content-label]");
+const projectTechLabel = document.querySelector("[data-project-tech-label]");
 const projectTechStack = document.querySelector("[data-project-tech-stack]");
 const projectImage = document.querySelector("[data-project-image]");
 const projectLink = document.querySelector("[data-project-link]");
@@ -91,14 +94,17 @@ projectLists.forEach((list) => {
         const hasHorizontalOverflow = maximumScroll > 1;
         const isVerticalWheelMovement = Math.abs(event.deltaY) > Math.abs(event.deltaX);
 
-        if (!hasHorizontalOverflow || !isVerticalWheelMovement) return;
+        if (!hasHorizontalOverflow || !isVerticalWheelMovement || event.ctrlKey) return;
 
         let wheelDistance = event.deltaY;
         if (event.deltaMode === WheelEvent.DOM_DELTA_LINE) wheelDistance *= 16;
         if (event.deltaMode === WheelEvent.DOM_DELTA_PAGE) wheelDistance *= list.clientWidth;
 
-        event.preventDefault();
         const nextPosition = Math.min(maximumScroll, Math.max(0, list.scrollLeft + wheelDistance));
+        // Let the page scroll when the carousel cannot move any farther.
+        if (Math.abs(nextPosition - list.scrollLeft) < 1) return;
+
+        event.preventDefault();
         list.scrollLeft = nextPosition;
     }, { passive: false });
 
@@ -175,7 +181,7 @@ function createProjectCard(project) {
                 <div class="project-item-icon-box" aria-hidden="true">
                     <ion-icon name="eye-outline"></ion-icon>
                 </div>
-                <img src="${project.cover}" loading="lazy" alt="${project.coverAlt}" draggable="false">
+                <img src="${project.thumbnail || project.cover}" loading="lazy" decoding="async" alt="${project.coverAlt}" draggable="false">
                 <figcaption class="project-card-caption">
                     <span class="project-card-title">${project.title}</span>
                 </figcaption>
@@ -217,10 +223,14 @@ async function loadProjects() {
 
 function openProjectPanel(name) {
     const project = projects.get(name);
+    const isPersonal = project.category === "personal";
 
     projectTitle.textContent = project.title;
-    projectStudios.textContent = project.studios.join(", ");
-    projectContent.textContent = project.role;
+    projectStudiosField.hidden = isPersonal;
+    projectStudios.textContent = isPersonal ? "" : (project.studios ?? []).join(", ");
+    projectContentLabel.textContent = isPersonal ? "Summary" : "My role";
+    projectContent.textContent = isPersonal ? (project.summary ?? project.role ?? "To be added.") : project.role;
+    projectTechLabel.textContent = isPersonal ? "Technologies" : "Tech stack";
     projectTechStack.textContent = project.techStack?.length ? project.techStack.join(", ") : "To be added.";
     projectImage.src = project.cover;
     projectImage.alt = project.coverAlt;

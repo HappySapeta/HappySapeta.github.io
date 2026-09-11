@@ -7,7 +7,8 @@
     "role": "Performance Analysis",
     "techStack": ["Unreal Engine 5", "C++", "Blueprints", "Unreal Insights"],
     "url": "https://www.exoborne.com/en/",
-    "cover": "./assets/images/exoborne.jpg",
+    "cover": "./assets/images/exoborne-thumb.webp",
+    "thumbnail": "./assets/images/exoborne-thumb.webp",
     "coverAlt": "Exoborne cover art"
   },
   {
@@ -18,7 +19,8 @@
     "role": "Gameplay features, bug-fixing and UI optimisation.",
     "techStack": ["Unity", "C#"],
     "url": "https://www.fallguys.com/",
-    "cover": "./assets/images/fallguys.jpg",
+    "cover": "./assets/images/fallguys-thumb.webp",
+    "thumbnail": "./assets/images/fallguys-thumb.webp",
     "coverAlt": "FallGuys cover art"
   },
   {
@@ -29,7 +31,8 @@
     "role": "Developed frontend and in-game UI.",
     "techStack": ["Unreal Engine 5", "C++", "UMG", "CommonUI", "Enhanced Input"],
     "url": "https://deathsprint66.com/",
-    "cover": "./assets/images/deathsprint66.jpg",
+    "cover": "./assets/images/deathsprint66-thumb.webp",
+    "thumbnail": "./assets/images/deathsprint66-thumb.webp",
     "coverAlt": "DeathSprint66 cover art"
   },
   {
@@ -39,7 +42,8 @@
     "studios": ["Sumo Video Games"],
     "role": "Developed gameplay features, networked systems and crowd simulation.",
     "techStack": ["Unreal Engine 5", "C++", "Unreal Replication Framework", "Unreal Insights", "UMG", "Raylib"],
-    "cover": "./assets/images/unannounced_title.png",
+    "cover": "./assets/images/unannounced_title-thumb.webp",
+    "thumbnail": "./assets/images/unannounced_title-thumb.webp",
     "coverAlt": "Placeholder"
   },
   {
@@ -50,7 +54,8 @@
     "role": "Developed gameplay features. Fixing bugs, some in networked systems. Performance Optimisation.",
     "techStack": ["Unity", "C#"],
     "url": "https://www.terahard.org/Press/sheet.php?p=BADA_Space_Station",
-    "cover": "./assets/images/badass.png",
+    "cover": "./assets/images/badass-thumb.webp",
+    "thumbnail": "./assets/images/badass-thumb.webp",
     "coverAlt": "Badass Cover Art"
   },
   {
@@ -60,8 +65,19 @@
     "studios": ["TeraHard Studios", "Rewind (Now Magnopus)"],
     "role": "Developed gameplay features. Bug fixing.",
     "techStack": ["Unity", "C#"],
-    "url": "https://expocitydubai.com/en/expo-2020/",
-    "cover": "./assets/images/dubaiexpo.webp",
+    "url": "https://www.magnopus.com/projects/dubai-expo-2020",
+    "cover": "./assets/images/dubaiexpo-thumb.webp",
+    "coverAlt": "Dubai-Expo Cover Art"
+  },
+  {
+    "id": "crowd",
+    "category": "personal",
+    "title": "Crowd Simulation Masters Project",
+    "summary": "Developed gameplay features. Bug fixing.",
+    "techStack": ["Unity", "C#"],
+    "url": "https://www.magnopus.com/projects/dubai-expo-2020",
+    "cover": "./assets/images/dubaiexpo-thumb.webp",
+    "thumbnail": "./assets/images/dubaiexpo-thumb.webp",
     "coverAlt": "Dubai-Expo Cover Art"
   }
 ]
