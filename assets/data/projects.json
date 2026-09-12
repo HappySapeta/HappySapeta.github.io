@@ -4,7 +4,7 @@
     "category": "professional",
     "title": "Exoborne",
     "studios": ["Sharkmob", "Sumo Video Games"],
-    "role": "Performance Analysis. Blueprint Nativization.",
+    "role": "Performance Analysis of Player Bots. Blueprint Nativization.",
     "techStack": ["Unreal Engine 5", "C++", "Blueprints", "Unreal Insights"],
     "url": "https://www.exoborne.com/en/",
     "cover": "./assets/images/exoborne.webp",
@@ -103,6 +103,17 @@
     "coverAlt": "NetStrike"
   },
   {
+    "id": "vehicle",
+    "category": "personal",
+    "title": "Arcade Vehicle",
+    "summary": "An arcade-like vehicle simulator featuring engine and drive-train Simulation, and dynamic wheel friction adjustment to provide an arcade-like vehicle control.",
+    "techStack": ["Unity", "C#"],
+    "url": "https://github.com/HappySapeta/ArcadeVehicle",
+    "cover": "./assets/images/vehicle.webp",
+    "thumbnail": "./assets/images/vehicle.webp",
+    "coverAlt": "Arcade Vehicle"
+  },
+  {
     "id": "royalflush",
     "category": "personal",
     "title": "University Game Project",
@@ -139,11 +150,22 @@
     "id": "xre",
     "category": "personal",
     "title": "Rendering Engine",
-    "summary": "A realtime rendering engine featuring, Deferred Rendering, Physically Based Shading, Screen Space Ambient Occlusion (SSAO), Exponential Variance Soft Shadows, Frustum Culling, Bloom and HDR",
+    "summary": "A realtime rendering engine featuring, Deferred Rendering, Physically Based Shading, Screen Space Ambient Occlusion (SSAO), Exponential Variance Soft Shadows, Frustum Culling, Bloom and HDR.",
     "techStack": ["OpenGL", "C++"],
     "url": "https://github.com/HappySapeta/XRE",
     "cover": "./assets/images/xre.webp",
     "thumbnail": "./assets/images/xre.webp",
     "coverAlt": "XRE"
+  },
+  {
+    "id": "astar",
+    "category": "personal",
+    "title": "Path Finding",
+    "summary": "An implementation of the A-Star path finding algorithm featuring different herusitic calculation methods.",
+    "techStack": ["Unreal Engine 5", "C++"],
+    "url": "https://github.com/HappySapeta/AStar",
+    "cover": "./assets/images/astar.webp",
+    "thumbnail": "./assets/images/astar.webp",
+    "coverAlt": "AStar"
   }
 ]
