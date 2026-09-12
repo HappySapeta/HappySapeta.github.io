@@ -2060,9 +2060,11 @@ body {
   min-height: 100vh;
   color: var(--white-2);
   background:
-    radial-gradient(circle at 78% 12%, var(--gold-glow), transparent 30rem),
-    radial-gradient(circle at 12% 88%, rgba(74, 91, 122, 0.16), transparent 32rem),
-    linear-gradient(145deg, #09090b 0%, #111216 52%, #09090b 100%);
+    radial-gradient(ellipse at 8% 12%, rgba(111, 78, 170, 0.24), transparent 48%),
+    radial-gradient(ellipse at 92% 28%, rgba(43, 135, 147, 0.20), transparent 48%),
+    radial-gradient(ellipse at 22% 88%, rgba(178, 93, 112, 0.16), transparent 45%),
+    radial-gradient(ellipse at 88% 92%, rgba(199, 157, 80, 0.12), transparent 42%),
+    linear-gradient(145deg, #10101b 0%, #10191f 52%, #16111c 100%);
   background-attachment: scroll;
 }
 
@@ -2413,57 +2415,29 @@ article {
 
 .project-collection-header .form-title { margin-bottom: 0; }
 
+/* Wrap every project into view instead of hiding cards in a scrolling row. */
 .project-list {
-  display: flex;
-  grid-template-columns: none;
-  gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 12px;
   margin: 0;
-  padding: 9px 9px 16px;
-  overflow-x: auto;
-  overscroll-behavior: contain;
-  scroll-behavior: auto;
-  scroll-snap-type: none;
-  scrollbar-color: var(--orange-yellow-crayola) rgba(255, 255, 255, 0.06);
-  scrollbar-width: thin;
+  padding: 9px 12px 16px;
   background: var(--panel-glass-strong);
   border-radius: 0 0 20px 20px;
-  cursor: grab;
-}
-
-.project-list .project-item > a { cursor: grab; }
-
-.project-list.is-dragging,
-.project-list.is-dragging .project-item > a {
-  cursor: grabbing;
-}
-
-.project-list.is-dragging {
-  user-select: none;
-}
-
-.project-list.is-dragging img {
-  pointer-events: none;
-}
-
-.project-list::-webkit-scrollbar { height: 7px; }
-
-.project-list::-webkit-scrollbar-track {
-  margin-inline: 10px;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 999px;
-}
-
-.project-list::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
-  border-radius: 999px;
 }
 
 .project-collection .project-item {
   display: block;
-  flex: 0 0 320px;
-  width: 320px;
-  max-width: 82vw;
-  scroll-snap-align: start;
+  min-width: 0;
+}
+
+.project-list .project-item > a {
+  border-radius: 10px;
+}
+
+.project-list .project-item > a:focus-visible {
+  outline: 2px solid var(--orange-yellow-crayola);
+  outline-offset: 3px;
 }
 
 .project-collection .project-img {
@@ -2474,7 +2448,7 @@ article {
 
 .project-list-message {
   display: grid;
-  flex: 1 0 100%;
+  grid-column: 1 / -1;
   min-height: 150px;
   place-items: center;
   padding: 24px;
@@ -2489,7 +2463,7 @@ article {
   isolation: isolate;
   margin-bottom: 0;
   border: 1px solid var(--glass-border);
-  border-radius: 0;
+  border-radius: 10px;
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
 }
 
@@ -2511,24 +2485,32 @@ article {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  padding: 20px;
+  padding: 28px 10px 10px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(8, 8, 10, 0.72) 45%,
+    rgba(8, 8, 10, 0.96)
+  );
 }
 
 .project-card-title {
   color: var(--white-2);
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
   font-weight: var(--fw-600);
   letter-spacing: -0.02em;
 }
 
 .project-item-icon-box {
-  top: 20px;
-  right: 20px;
+  top: 8px;
+  right: 8px;
   left: auto;
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 28px;
+  height: 28px;
   padding: 0;
   color: var(--smoky-black);
   background: var(--orange-yellow-crayola);
@@ -2625,15 +2607,7 @@ article {
   .about-text,
   .contact-form { padding: 16px; }
 
-  .project-collection .project-item {
-    flex-basis: 90%;
-    width: 90%;
-    max-width: 320px;
-  }
-
-  .project-list { gap: 14px; }
-
-  .project-card-caption { padding: 16px; }
+  .project-list { gap: 10px; }
 
 }
 
