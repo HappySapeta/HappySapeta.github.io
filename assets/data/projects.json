@@ -101,5 +101,49 @@
     "cover": "./assets/images/netstrike.webp",
     "thumbnail": "./assets/images/netstrike.webp",
     "coverAlt": "NetStrike"
+  },
+  {
+    "id": "royalflush",
+    "category": "personal",
+    "title": "University Game Project",
+    "summary": "A collaborative game project made as part of my master’s course. I developed a Poker mini-game that consists of a state-machine, blackboard and UI. I also developed rest of the UI and a camera switching mechanism.",
+    "techStack": ["Unreal Engine 5", "C++"],
+    "url": "https://github.com/HappySapeta/RoyalFlush",
+    "cover": "./assets/images/royalflush.webp",
+    "thumbnail": "./assets/images/royalflush.webp",
+    "coverAlt": "RoyalFlush"
+  },
+  {
+    "id": "autoagents",
+    "category": "personal",
+    "title": "Autonomous Agents",
+    "summary": "An implementation of Craig Reynold's Autonomous Agents using a data-oriented-approach.",
+    "techStack": ["Unreal Engine 5", "C++"],
+    "url": "https://github.com/HappySapeta/AutonomousAgents",
+    "cover": "./assets/images/autoagents.webp",
+    "thumbnail": "./assets/images/autoagents.webp",
+    "coverAlt": "AutoAgents"
+  },
+  {
+    "id": "island",
+    "category": "personal",
+    "title": "DirectX Rendering Project",
+    "summary": "A rendering simulation featuring dynamic tessellation, wave simulation using sin waves and sky-box reflection.",
+    "techStack": ["DirectX 11", "C++"],
+    "url": "https://github.com/HappySapeta/Island",
+    "cover": "./assets/images/island.webp",
+    "thumbnail": "./assets/images/island.webp",
+    "coverAlt": "Island"
+  },
+  {
+    "id": "xre",
+    "category": "personal",
+    "title": "Rendering Engine",
+    "summary": "A realtime rendering engine featuring, Deferred Rendering, Physically Based Shading, Screen Space Ambient Occlusion (SSAO), Exponential Variance Soft Shadows, Frustum Culling, Bloom and HDR",
+    "techStack": ["OpenGL", "C++"],
+    "url": "https://github.com/HappySapeta/XRE",
+    "cover": "./assets/images/xre.webp",
+    "thumbnail": "./assets/images/xre.webp",
+    "coverAlt": "XRE"
   }
 ]
